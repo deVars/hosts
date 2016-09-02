@@ -15,13 +15,21 @@ const customEntries = [
   `data.flurry.com`,
   `control.kochava.com`,
   `thanks.lobi.co`,
+  `155376.measurementapi.com`,
   `ad-analytics-bootstrap.metaps.com`,
   `api-analytics-bootstrap.metaps.com`,
   `api-analytics.metaps.com`,
   `14642.engine.mobileapptracking.com`,
   `bam.nr-data.net`,
+  `tr.pubnative.net`,
+  `rayjump.com`,
+  `res.rayjump.com`,
+  `net.rayjump.com`,
+  `setting.rayjump.com`,
+  `us01.rayjump.com`,
   `api.smbeat.jp`,
   `control.smbeat.jp`,
+  `trk-optimize.com`,
   `stats.unity3d.com`
 ];
 
