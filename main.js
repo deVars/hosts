@@ -2,17 +2,43 @@
 
 const FS = require(`fs`),
       HTTP = require(`http`),
-      HOSTS = require(`./hosts`),
-      UTILS = require(`./utils`),
-      constants = require(`./constants`);
+      UTILS = require(`./utils`);
 
-let config = undefined,
-    localConfig = {},
-    setOfHosts = new Set(),
-    hostsRequested = HOSTS.length,
-    hostsDone = 0;
+function getHosts(config, setOfHosts) {
+  const HOSTS = require(`./hosts`);
+  let hostsRequested = HOSTS.length,
+      hostsDone = 0
 
-function processHostEntries(entries) {
+  HOSTS.forEach(host => {
+    console.log(`processing ${host}. . .`);
+    HTTP.get(UTILS.splitUrl(host), res => {
+      let payload = [],
+          lineEnding = undefined;
+
+      res.on(`data`, chunk => {
+        lineEnding = lineEnding ||
+          config.LINE_ENDINGS.find(
+            ending => chunk.toString().lastIndexOf(ending) !== -1
+          );
+
+        payload.push(chunk);
+      });
+      res.on(`end`, () => {
+        let data = payload.join().split(lineEnding);
+
+        processHostEntries(config, setOfHosts, data);
+        hostsDone++;
+        if (hostsDone === hostsRequested) {
+          prepareData(config, setOfHosts);
+        }
+      });
+    }).on(`error`, e => {
+      console.log(`Got error: ${e.message}`);
+    });
+  });
+}
+
+function processHostEntries(config, setOfHosts, entries) {
   entries.forEach(entry => {
     let matches = config.ENTRY_PATTERN.exec(entry),
         host = matches && matches[1] || undefined;
@@ -22,17 +48,17 @@ function processHostEntries(entries) {
   });
 }
 
-function prepareData() {
+function prepareData(config, setOfHosts) {
   const CUSTOM_ENTRIES = require(`./customEntries`);
 
   CUSTOM_ENTRIES.forEach(entry => {
     setOfHosts.add(entry);
   });
   setOfHosts.delete(`localhost`);
-  writeData();
+  writeData(config, setOfHosts);
 }
 
-function writeData() {
+function writeData(config, setOfHosts) {
   const PATH = require(`path`),
         TEMPLATE = require(`./template`),
         OUTPUT_DIRECTORY = PATH.join(`./`, config.OUTPUT_DIRECTORY),
@@ -61,37 +87,16 @@ function writeData() {
   );
 }
 
-try {
-  FS.accessSync(`./local.js`, FS.R_OK);
-  localConfig = require(`./local`);
-} catch (e) {}
+FS.access(`./local.js`, FS.R_OK, err => {
+  const defaultConfig = require(`./defaultConfig`);
+  let setOfHosts = new Set(),
+      localConfig = {},
+      config;
 
-config = Object.assign({}, constants, localConfig);
+  if (!err) {
+    localConfig = require(`./local`);
+  }
 
-HOSTS.forEach(host => {
-  console.log(`processing ${host}. . .`);
-  HTTP.get(UTILS.splitUrl(host), res => {
-    let payload = [],
-        lineEnding = undefined;
-
-    res.on(`data`, chunk => {
-      lineEnding = lineEnding ||
-        config.LINE_ENDINGS.find(
-          ending => chunk.toString().lastIndexOf(ending) !== -1
-        );
-
-      payload.push(chunk);
-    });
-    res.on(`end`, () => {
-      let data = payload.join().split(lineEnding);
-
-      processHostEntries(data);
-      hostsDone++;
-      if (hostsDone === hostsRequested) {
-        prepareData();
-      }
-    })
-  }).on(`error`, e => {
-    console.log(`Got error: ${e.message}`);
-  });
+  config = Object.assign({}, defaultConfig, localConfig);
+  getHosts(config, setOfHosts);
 });
