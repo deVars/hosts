@@ -1,3 +1,4 @@
+'use strict';
 module.exports = {
   pad: function(n, width, z) {
     z = z || '0';

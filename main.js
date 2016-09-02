@@ -58,13 +58,17 @@ function writeData() {
 }
 
 HOSTS.forEach(host => {
+  console.log(`processing ${host}. . .`);
   HTTP.get(UTILS.splitUrl(host), res => {
     let payload = [],
         lineEnding = undefined;
 
     res.on(`data`, chunk => {
       lineEnding = lineEnding ||
-        CONSTANTS.LINE_ENDINGS.find(ending => chunk.lastIndexOf(ending) !== -1);
+        CONSTANTS.LINE_ENDINGS.find(
+          ending => chunk.toString().lastIndexOf(ending) !== -1
+        );
+
       payload.push(chunk);
     });
     res.on(`end`, () => {
