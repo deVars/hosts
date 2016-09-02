@@ -14,6 +14,8 @@ const customEntries = [
   `notification.fello.net`,
   `data.flurry.com`,
   `control.kochava.com`,
+  `thanks.lobi.co`,
+  `ad-analytics-bootstrap.metaps.com`,
   `api-analytics-bootstrap.metaps.com`,
   `api-analytics.metaps.com`,
   `14642.engine.mobileapptracking.com`,
