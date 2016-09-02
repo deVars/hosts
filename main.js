@@ -61,7 +61,7 @@ function prepareData(config, setOfHosts) {
 function writeData(config, setOfHosts) {
   const PATH = require(`path`),
         TEMPLATE = require(`./template`),
-        OUTPUT_DIRECTORY = PATH.join(`./`, config.OUTPUT_DIRECTORY),
+        OUTPUT_DIRECTORY = PATH.join(config.OUTPUT_DIRECTORY),
         OUTPUT_PATH = PATH.join(OUTPUT_DIRECTORY, config.OUTPUT_FILENAME);
 
   let dateToday = new Date(),
