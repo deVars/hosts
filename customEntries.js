@@ -1,6 +1,7 @@
 const customEntries = [
   `api.5rocks.io`,
   `52e901f500821d2b94000005.api.5rocks.io`,
+  `app.adjust.com`,
   `action.adzcore.com`,
   `setting.adzcore.com`,
   `api.appsflyer.com`,
