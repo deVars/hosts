@@ -73,18 +73,17 @@ function writeData(config, setOfHosts) {
                    `${UTILS.pad(dateToday.getUTCMonth() + 1, 2)}` +
                    `${dateToday.getUTCFullYear()}`;
 
-  try {
-    FS.accessSync(OUTPUT_DIRECTORY, FS.F_OK);
-  } catch (e) {
-    FS.mkdirSync(OUTPUT_DIRECTORY);
-  }
-
-  FS.writeFile(OUTPUT_PATH,
-    TEMPLATE.get(dateString, finalDataString, numUniqueHosts),
-    () => {
-    console.log(`I am done. Number of Hosts: ${numUniqueHosts}`);
+  FS.access(OUTPUT_DIRECTORY, FS.F_OK | FS.R_OK | FS.W_OK, err => {
+    if (err) {
+      FS.mkdirSync(OUTPUT_DIRECTORY);
     }
-  );
+    FS.writeFile(OUTPUT_PATH,
+      TEMPLATE.get(dateString, finalDataString, numUniqueHosts),
+      () => {
+      console.log(`I am done. Number of Hosts: ${numUniqueHosts}`);
+      }
+    );
+  });
 }
 
 FS.access(`./local.js`, FS.R_OK, err => {
