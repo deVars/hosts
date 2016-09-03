@@ -1,12 +1,15 @@
 const customEntries = [
+  `52e901f500821d2b94000005.api.5rocks.io`,
   `api.5rocks.io`,
   `androidads23.adcolony.com`,
   `events3alt.adcolony.com`,
-  `52e901f500821d2b94000005.api.5rocks.io`,
   `app.adjust.com`,
+  `cast-cs-j.adtdp.com`,
   `action.adzcore.com`,
   `setting.adzcore.com`,
+  `bypass.ad-stir.com`,
   `supersonicads-a.akamaihd.net`,
+  `device-metrics-us.amazon.com`,
   `rt.applovin.com`,
   `tap-nexus.appspot.com`,
   `e.crashlytics.com`,
@@ -35,7 +38,8 @@ const customEntries = [
   `init.supersonicads.com`,
   `outcome.supersonicads.com`,
   `ua.supersonicads.com`,
-  `trk-optimize.com`
+  `trk-optimize.com`,
+  `rq.vserv.mobi`
 ];
 
 module.exports = customEntries;
