@@ -1,5 +1,4 @@
 const customEntries = [
-  `ad.doubleclick.net.18295.9086.302br.net`,
   `api.5rocks.io`,
   `androidads23.adcolony.com`,
   `events3alt.adcolony.com`,
@@ -8,21 +7,15 @@ const customEntries = [
   `action.adzcore.com`,
   `setting.adzcore.com`,
   `supersonicads-a.akamaihd.net`,
-  `api.appsflyer.com`,
-  `t.appsflyer.com`,
-  `track.appsflyer.com`,
   `rt.applovin.com`,
   `tap-nexus.appspot.com`,
-  `live.chartboost.com`,
   `e.crashlytics.com`,
   `settings.crashlytics.com`,
   `graph.facebook.com`,
   `notification.fello.net`,
-  `data.flurry.com`,
   `adproxy.fyber.com`,
   `engine.fyber.com`,
   `video.fyber.com`,
-  `control.kochava.com`,
   `thanks.lobi.co`,
   `155376.measurementapi.com`,
   `ad-analytics-bootstrap.metaps.com`,
@@ -30,7 +23,6 @@ const customEntries = [
   `api-analytics.metaps.com`,
   `14642.engine.mobileapptracking.com`,
   `mrthumb.nabstudio.com`,
-  `bam.nr-data.net`,
   `tr.pubnative.net`,
   `rayjump.com`,
   `res.rayjump.com`,
@@ -43,8 +35,7 @@ const customEntries = [
   `init.supersonicads.com`,
   `outcome.supersonicads.com`,
   `ua.supersonicads.com`,
-  `trk-optimize.com`,
-  `stats.unity3d.com`
+  `trk-optimize.com`
 ];
 
 module.exports = customEntries;
