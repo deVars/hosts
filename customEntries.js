@@ -37,6 +37,7 @@ const customEntries = [
   `us01.rayjump.com`,
   `api.smbeat.jp`,
   `control.smbeat.jp`,
+  `engine.sponsorpay.com`,
   `www.ssacdn.com`,
   `init.supersonicads.com`,
   `outcome.supersonicads.com`,
