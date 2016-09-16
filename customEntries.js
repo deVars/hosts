@@ -30,6 +30,7 @@ const customEntries = [
   `rt.gsspat.jp`,
   `cs.gssprt.jp`,
   `thanks.lobi.co`,
+  `control.kochava.com`,
   `155376.measurementapi.com`,
   `ad-analytics-bootstrap.metaps.com`,
   `api-analytics-bootstrap.metaps.com`,
