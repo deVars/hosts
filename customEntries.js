@@ -4,6 +4,7 @@ const customEntries = [
   `androidads23.adcolony.com`,
   `events3alt.adcolony.com`,
   `app.adjust.com`,
+  `103.bm-nginx-loadbalancer.mgmt.lax1.adnexus.net`,
   `mnnbv.adsbtrk.com`,
   `cast-cs-j.adtdp.com`,
   `dex.advg.jp`,
@@ -52,7 +53,8 @@ const customEntries = [
   `outcome.supersonicads.com`,
   `ua.supersonicads.com`,
   `trk-optimize.com`,
-  `rq.vserv.mobi`
+  `rq.vserv.mobi`,
+  `cn-agentportal.flurry.vip.gq1.yahoo.com`
 ];
 
 module.exports = customEntries;
