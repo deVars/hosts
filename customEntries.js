@@ -52,6 +52,8 @@ const customEntries = [
   `init.supersonicads.com`,
   `outcome.supersonicads.com`,
   `ua.supersonicads.com`,
+  `content-js.tapjoy.com`,
+  `rpc.tapjoy.com`,
   `trk-optimize.com`,
   `rq.vserv.mobi`,
   `cn-agentportal.flurry.vip.gq1.yahoo.com`
