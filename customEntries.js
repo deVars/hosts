@@ -53,6 +53,7 @@ const customEntries = [
   `outcome.supersonicads.com`,
   `ua.supersonicads.com`,
   `content-js.tapjoy.com`,
+  `placements.tapjoy.com`, 
   `rpc.tapjoy.com`,
   `trk-optimize.com`,
   `rq.vserv.mobi`,
