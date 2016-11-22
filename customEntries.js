@@ -20,7 +20,7 @@ const customEntries = [
   `tap-nexus.appspot.com`,
   `e.crashlytics.com`,
   `settings.crashlytics.com`,
-  `smetrics.discover.io`,
+  `smetrics.discover.com`,
   `graph.facebook.com`,
   `notification.fello.net`,
   `adproxy.fyber.com`,
