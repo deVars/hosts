@@ -42,6 +42,7 @@ const customEntries = [
   `14642.engine.mobileapptracking.com`,
   `mrthumb.nabstudio.com`,
   `le.nakanohito.jp`,
+  `mobile-crash.newrelic.com`, 
   `capitaloneservices.tt.omtrdc.net`, 
   `tr.pubnative.net`,
   `rayjump.com`,
