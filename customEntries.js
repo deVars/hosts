@@ -62,6 +62,7 @@ const customEntries = [
   `rpc.tapjoy.com`,
   `trk-optimize.com`,
   `rq.vserv.mobi`,
+  `api.wirelessdeveloper.com`, 
   `cn-agentportal.flurry.vip.gq1.yahoo.com`
 ];
 
