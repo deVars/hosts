@@ -72,6 +72,7 @@ const customEntries = [
   `rpc.tapjoy.com`,
   `trk-optimize.com`,
   `batch.upsight-api.com`,
+  `bootstrap.upsight-api.com`,
   `single.upsight-api.com`,
   `combine.urbanairship.com`,
   `device-api.urbanairship.com`,
