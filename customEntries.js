@@ -69,7 +69,6 @@ const customEntries = [
   `ua.supersonicads.com`,
   `content-js.tapjoy.com`,
   `placements.tapjoy.com`, 
-  `rpc.tapjoy.com`,
   `trk-optimize.com`,
   `batch.upsight-api.com`,
   `bootstrap.upsight-api.com`,
