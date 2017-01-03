@@ -33,6 +33,8 @@ const customEntries = [
   `api.branch.io`,
   `smetrics.capitalone.com`,
   `res.cloudinary.com`,
+  `cn.com`,
+  `www.cn.com`,
   `cdn.contentful.com`,
   `e.crashlytics.com`,
   `settings.crashlytics.com`,
@@ -72,6 +74,7 @@ const customEntries = [
   `citimobile.d2.sc.omtrdc.net`,
   `d.pixiv.org`,
   `tr.pubnative.net`,
+  `rqd.uu.qq.com`,
   `rayjump.com`,
   `res.rayjump.com`,
   `net.rayjump.com`,
@@ -87,6 +90,7 @@ const customEntries = [
   `init.supersonicads.com`,
   `outcome.supersonicads.com`,
   `ua.supersonicads.com`,
+  `fdc.tapjoy.com`,
   `content-js.tapjoy.com`,
   `placements.tapjoy.com`, 
   `trk-optimize.com`,
@@ -99,6 +103,8 @@ const customEntries = [
   `cdn.usebutton.com`,
   `rq.vserv.mobi`,
   `api.wirelessdeveloper.com`,
+  `ga.xdrig.com`,
+  `pg.xdrig.com`,
   `b92.yahoo.co.jp`,
   `cn-agentportal.flurry.vip.gq1.yahoo.com`
 ];
