@@ -34,6 +34,7 @@ const customEntries = [
   `api.branch.io`,
   `smetrics.capitalone.com`,
   `res.cloudinary.com`,
+  `api.cloudmobi.net`,
   `cn.com`,
   `www.cn.com`,
   `reverse.gdsz.cncnet.net`,
