@@ -64,6 +64,7 @@ const customEntries = [
   `rt.gsspat.jp`,
   `cs.gssprt.jp`,
   `spdmg-backend.i-mobile.co.jp`,
+  `stats.jpush.cn`,
   `control.kochava.com`,
   `thanks.lobi.co`,
   `dispatch.look.io`,
