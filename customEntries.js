@@ -117,6 +117,7 @@ const customEntries = [
   `api.wirelessdeveloper.com`,
   `ga.xdrig.com`,
   `pg.xdrig.com`,
+  `sdk.api.xtify.com`,
   `b92.yahoo.co.jp`,
   `cn-agentportal.flurry.vip.gq1.yahoo.com`
 ];
