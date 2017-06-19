@@ -74,6 +74,7 @@ const customEntries = [
   `api-analytics-bootstrap.metaps.com`,
   `api-analytics.metaps.com`,
   `14642.engine.mobileapptracking.com`,
+  `upload.mobpowertech.com`,
   `config2.mparticle.com`,
   `nativesdks.mparticle.com`,
   `mrthumb.nabstudio.com`,
