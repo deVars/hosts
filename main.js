@@ -15,16 +15,17 @@ function getHosts(config, setOfHosts) {
       let payload = [],
           lineEnding = undefined;
 
-      res.on(`data`, chunk => {
+      res.on(`data`, chunk => payload += chunk);
+      res.on(`end`, () => {
         lineEnding = lineEnding ||
           config.LINE_ENDINGS.find(
-            ending => chunk.toString().lastIndexOf(ending) !== -1
+            ending => payload.lastIndexOf(ending) !== -1
           );
-
-        payload.push(chunk);
-      });
-      res.on(`end`, () => {
-        let data = payload.join().split(lineEnding);
+        if (!lineEnding) {
+          console.log(`Did not find proper line ending.`);
+          return;
+        }
+        let data = payload.split(lineEnding);
 
         processHostEntries(config, setOfHosts, data);
         hostsDone++;
