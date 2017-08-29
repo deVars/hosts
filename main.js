@@ -21,11 +21,13 @@ function getHosts(config, setOfHosts) {
           config.LINE_ENDINGS.find(
             ending => payload.lastIndexOf(ending) !== -1
           );
+            
+        let data = [];
         if (!lineEnding) {
           console.log(`Did not find proper line ending.`);
-          return;
+        } else {
+          data = payload.split(lineEnding);
         }
-        let data = payload.split(lineEnding);
 
         processHostEntries(config, setOfHosts, data);
         hostsDone++;
