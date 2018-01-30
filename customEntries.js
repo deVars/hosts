@@ -1,6 +1,7 @@
 const customEntries = [
   `52e901f500821d2b94000005.api.5rocks.io`,
   `api.5rocks.io`,
+  `app.adjust.com`,
   `androidads23.adcolony.com`,
   `events3alt.adcolony.com`,
   `app.adjust.com`,
