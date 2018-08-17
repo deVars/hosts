@@ -48,6 +48,7 @@ const customEntries = [
   `graph.facebook.com`,
   `connect.facebook.net`,
   `notification.fello.net`,
+  `ffe5bd4c787357c.com`,
   `a.fiksu.com`,
   `sdk.fiksu.com`,
   `adroute.focas.jp`,
