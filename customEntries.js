@@ -32,6 +32,8 @@ const customEntries = [
   `md-a-c.apptimize.com`,
   `md-a-s.apptimize.com`,
   `analytics.atlassian.com`,
+  `api.c.avazunativeads.com`,
+  `cdn.avazutracking.net`,
   `api.branch.io`,
   `smetrics.capitalone.com`,
   `res.cloudinary.com`,
